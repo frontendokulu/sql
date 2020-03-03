@@ -1,0 +1,14 @@
+
+# GROUP BY ile Country ler gruplandı ve tekrar edenler gösterilmedi.
+# GROUP BY Country => Country sütunu aynı olan satırları 
+# toplar ve tek bir satır halinde gösterir.
+# Gösterdiği satır ise ilk karşılaştığı satırdır.
+# bir nevi tekrar edenleri kaldır gibi.
+SELECT * FROM customers GROUP BY Country
+
+
+# customers tablosunda hangi ülkeden kaç tane olduğunu belirten sql kodu
+SELECT COUNT(CustomerID) AS sayi,Country 
+FROM `customers` 
+GROUP BY Country 
+ORDER BY sayi DESC 
